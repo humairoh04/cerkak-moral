@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap'); /* Font dongeng contoh */
+
+body {
+    margin: 0;
+    background: #f3f1e7;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+img {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 100%;
+    height: auto;
+}
+.majalah-header {
+    background: #e0cab1;
+    padding: 1.2em 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+}
+.majalah-header h1 {
+    font-family: 'IM Fell English', serif;
+    font-size: 2.4em;
+    margin-bottom: .4em;
+    letter-spacing: 2px;
+}
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #8a5230;
+    font-weight: bold;
+}
+.majalah-content {
+    max-width: 760px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 2em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.09);
+    border-radius: 9px;
+}
+article p {
+    text-indent: 0;
+    margin-top: 2.2em;
+    font-size: 1.15em;
+    position: relative;
+    text-align: justify;
+}
+span.dongeng {
+    font-family: 'IM Fell English', serif;
+    font-size: 2.6em;
+    float: left;
+    font-weight: bold;
+    color: #d1871c;
+    line-height: 1;
+    margin-right: 12px;
+    padding-top: 1px;
+    text-shadow: 1px 2px 5px #e5c582;
+}
+footer {
+    background: #e0cab1;
+    text-align: center;
+    padding: .8em;
+    position: relative;
+    bottom: 0;
+    margin-top: 2em;
+    color: #7a4b22;
+    font-size: .95em;
+}
