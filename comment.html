@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+    <meta charset="UTF-8">
+    <title>Komentar Pembaca</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .comment-container {
+            max-width: 600px;
+            margin: 2em auto;
+            background: #efe6dd;
+            padding: 2em 1.5em;
+            border-radius: 10px;
+            box-shadow: 0 2px 7px rgba(0,0,0,0.04);
+        }
+        .comment-title {
+            font-family: 'IM Fell English', serif;
+            font-size: 2em;
+            color: #895121;
+            margin-bottom: .6em;
+        }
+        label, textarea, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        textarea {
+            min-height: 90px;
+            font-size: 1.05em;
+        }
+        input[type="submit"] {
+            background: #e0cab1;
+            color: #7a4b22;
+            font-weight: bold;
+            border: none;
+            border-radius: 7px;
+            padding: .7em 0;
+            cursor: pointer;
+        }
+        .reader-comments {
+            margin-top: 2em;
+        }
+        .single-comment {
+            background: #fff;
+            border-radius: 7px;
+            margin-bottom: 1em;
+            padding: .8em 1em;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body>
+    <header class="majalah-header">
+        <nav>
+            <a href="index.html">Cerita</a>
+            <a href="poster.html">Poster</a>
+            <a href="comment.html">Komentar</a>
+        </nav>
+    </header>
+    <div class="comment-container">
+        <div class="comment-title">Kolom Komentar Pembaca</div>
+        <form id="commentForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" required>
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" required></textarea>
+            <input type="submit" value="Kirim Komentar">
+        </form>
+        <div class="reader-comments" id="readerComments">
+            <!-- Komentar pembaca akan muncul di sini -->
+        </div>
+    </div>
+    <footer>
+        © putrimawar&humairoh
+    </footer>
+    <script>
+        const form = document.getElementById('commentForm');
+        const readerComments = document.getElementById('readerComments');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+
+            const div = document.createElement('div');
+            div.className = 'single-comment';
+            div.innerHTML = `<strong>${name}</strong><br><p>${comment}</p>`;
+            readerComments.prepend(div);
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>
